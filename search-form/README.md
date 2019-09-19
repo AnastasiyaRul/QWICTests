@@ -1,23 +1,17 @@
 
-## Available Scripts
+There were implemented the points:
+•	reports of autotests
+•	screenshots of each test after execution
+•	multi browser approach
+•	two E2E tests and one integration test
+•	Page Object classes were built and driven into Tests
+•	Data Page will help to avoid the hardcode and implement circle execution if needed
+how to run:
+1.	Using the IntelIDEA protractor configuration
+2. Scripts
+2.1. npm run webdriver-manager-update-start
+2.2. npm run protractor Tests/conf.js
+2.3. npm run protractor Tests/intconf.js
+3.	go through instruction on http://www.protractortest.org/#/
 
-In the project directory, you can run:
-
-### `npm start`
-
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
-
-### `npm run build:frontend`
-
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
