@@ -31,7 +31,11 @@
     "start": "node server.js",
     "start:frontend": "react-scripts start",
     "build:frontend": "react-scripts build",
-    "start:build": "npx serve ./build -p 3000"
+    "start:build": "npx serve ./build -p 3000",
+    "webdriver-manager-update-start": "webdriver-manager update && webdriver-manager start",
+    "test-e2e": "protractor Tests/conf.js",
+    "test-int": "protractor Tests/intconf.js",
+    "test": "npm-run-all --parallel webdriver-manager-update-start test-e2e test-int"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -49,6 +53,7 @@
     ]
   },
   "devDependencies": {
-    "serve": "^11.0.0"
+    "serve": "^11.0.0",
+    "npm-run-all": "4.1.5"
   }
 }

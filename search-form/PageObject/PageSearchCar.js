@@ -1,5 +1,4 @@
-var using = require('jasmine-data-provider');
-var d = require ('../data/searchData');
+var d = require('../data/searchData');
 
 var EC = protractor.ExpectedConditions;
 var PageSearchCar = function () {
@@ -27,7 +26,7 @@ var PageSearchCar = function () {
     };
 
     // Search function by Brand + model
-    this.searchBy = async function (brandField, brand,  modelField, model) {
+    this.searchBy = async function (brandField, brand, modelField, model) {
         await expect(brandField.isPresent()).toBe(true);
         await brandField.click();
         await browser.wait(EC.visibilityOf(brand), 5000);
@@ -41,7 +40,7 @@ var PageSearchCar = function () {
     };
 
     // Search function by Keyword
-    this.searchByKeyword = async function (brandField, brand,  modelField, model, searchValue) {
+    this.searchByKeyword = async function (brandField, brand, modelField, model, searchValue) {
         //Search Brand+Model
         await expect(brandField.isPresent()).toBe(true);
         await brandField.click();

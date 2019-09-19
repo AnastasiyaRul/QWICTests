@@ -1,8 +1,5 @@
-var using = require('jasmine-data-provider');
-var obj = require ('../PageObject/PageSearchCar.js');
-var d = require ('../data/searchData');
-var EC = protractor.ExpectedConditions;
-
+var obj = require('../PageObject/PageSearchCar.js');
+var d = require('../data/searchData');
 
 beforeEach(async function () {
     // Login before each test
@@ -26,18 +23,16 @@ describe('Buy a car', function () {
     it('Buy a car page: Search By Keyword', async function () {
         //Search all the Audi A3
         //Search BY Keyword 2019 (data page) - filter on 2019 year
-         await obj.searchByKeyword(obj.brandSelection, obj.AudiBrand, obj.modelSelection, obj.AudiModel, d.searchData.SearchValue);
-         // Check the presence of alert
+        await obj.searchByKeyword(obj.brandSelection, obj.AudiBrand, obj.modelSelection, obj.AudiModel, d.searchData.SearchValue);
+        // Check the presence of alert
         var popupAlert = browser.switchTo().alert();
         let alertText = popupAlert.getText();
         await expect(alertText).toBe(d.searchData.Result);
         await browser.switchTo().alert().accept();
     });
-
-
 });
 
-    afterEach(function () {
+afterEach(function () {
     browser.refresh();
     browser.waitForAngularEnabled(true);
 });
