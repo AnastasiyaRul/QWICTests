@@ -1,0 +1,55 @@
+{
+  "name": "search-form",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@types/node": "12.0.2",
+    "@types/react": "16.8.18",
+    "@types/react-dom": "16.8.4",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "react-scripts": "3.0.1",
+    "typescript": "3.4.5",
+    "json-server": "^0.15.0",
+    "protractor": ">=5.4.2",
+    "codelyzer": "4.5.0",
+    "jasmine-core": "3.3.0",
+    "jasmine-spec-reporter": "4.2.1",
+    "karma": "3.1.4",
+    "karma-chrome-launcher": "2.2.0",
+    "karma-cli": "2.0.0",
+    "karma-coverage-istanbul-reporter": "2.0.4",
+    "karma-jasmine": "2.0.1",
+    "karma-jasmine-html-reporter": "1.4.0",
+    "protractor-jasmine2-html-reporter": "0.0.7",
+    "jasmine-data-provider": "2.2.0",
+    "jasmine-object-matchers-jest": "0.1.0",
+    "jasmine-object-containing": "0.0.2",
+    "protractor-http-client": "1.0.4"
+  },
+  "scripts": {
+    "start": "node server.js",
+    "start:frontend": "react-scripts start",
+    "build:frontend": "react-scripts build",
+    "start:build": "npx serve ./build -p 3000",
+
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "serve": "^11.0.0"
+  }
+}
